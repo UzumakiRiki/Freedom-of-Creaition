@@ -1,8 +1,8 @@
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Freedom of CreAItion backend is live!"}
-# Placeholder for backend/main.py
+    return JSONResponse(content={"message": "Freedom of CreAItion backend is live!"})
