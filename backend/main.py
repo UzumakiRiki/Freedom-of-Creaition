@@ -44,4 +44,5 @@ async def generate(file: UploadFile = File(...)):
 
 # Static file serving
 from fastapi.staticfiles import StaticFiles
-app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
